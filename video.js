@@ -115,6 +115,7 @@ let nextEpisode = ()=>{
 	}else{
 		changeEpisode(episodes[0]);
 	}
+	updateContinue()
 	fixVideo();
 }
 
@@ -124,6 +125,7 @@ let lastEpisode = ()=>{
 	}else{
 		changeEpisode(episodes[episodes.length - 1]);
 	}
+	updateContinue()
 	fixVideo();
 }
 

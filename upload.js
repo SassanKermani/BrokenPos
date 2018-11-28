@@ -43,6 +43,7 @@ let populateFoldorsPartTwoAddingButtons = (dbObjectName)=>{										//activly w
 	let tempButton = document.createElement(`button`);
 	tempButton.innerHTML = dbObjectName;
 	tempButton.addEventListener(`click`, ()=>{
+		vids = [];
 		foldor = dbObjectName;
 		isNewFoldor = false;
 		getEpisodesFromDb(foldor).then((moreUsefullData)=>{
