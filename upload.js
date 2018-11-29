@@ -1,13 +1,14 @@
-/*============================
-=            vars            =
-============================*/
+/*==============================
+=            Set Up            =
+==============================*/
 
 let fs = require(`fs`);
 let vids = [];
 let foldor = ``;
 let isNewFoldor = false;
 
-/*=====  End of vars  ======*/
+/*=====  End of Set Up  ======*/
+
 
 /*========================================
 =            selecting folder            =
@@ -267,7 +268,7 @@ document.getElementById(`importSectionGoButton`).addEventListener(`click`, ()=>{
 });
 
 document.getElementById(`uploadButton`).addEventListener(`click`, ()=>{
-	writeToDb();
+	// writeToDb();
 	// console.log(vids);
 })
 /*=====  End of Testing  ======*/

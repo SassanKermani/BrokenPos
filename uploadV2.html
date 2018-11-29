@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>upload</title>
+
+	<style type="text/css">
+		
+		#selectFrom{
+			float: left;
+			width: 48%;
+			padding: 1%;
+
+			color: red;
+			background: blue;
+		}
+
+		#selectTo{
+			float: right;
+			width: 48%;
+			padding: 1%;
+
+			color: green;
+			background-color: yellow;
+		}
+
+		.block{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	
+	<div>
+		<button><a href="./video.html">video</a></button>
+		<br>
+		<br>
+	</div>
+
+	<div id="selectFrom">
+		
+		<h3>Select From</h3>
+		
+		<input type="file" id="inputNewEpisodes" multiple="multiple" >
+		
+		<br>
+		<br>
+
+		<div id="selectFromFoldorsSpecal">
+			
+		</div>
+		<div id="selectFromFoldorsNormal">
+			
+		</div>
+		<hr>
+		<div id="selectFromEpisodes">
+			
+		</div>
+	</div>
+
+	<div id="selectTo">
+		<h3>Select To</h3>
+		
+		<input type="text" id="nameOfNewFolder">
+		<button id="buttonForNameOfNewFolder">go</button>
+
+		<br>
+
+		<div id="selectToFoldors">
+			
+		</div>
+		<hr>
+		<div id="selectToEpisodes">
+			
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		// require(`./uploadV2.js`);
+		require(`./uploadV3.js`);
+	</script>
+
+</body>
+</html>

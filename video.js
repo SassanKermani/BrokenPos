@@ -178,6 +178,22 @@ let skipBackward = ()=>{
 	}
 }
 
+let theaterModeTogle = ()=>{
+	if( document.getElementById(`videoPlayer`).classList.contains(`normal`) ){
+		document.getElementById(`videoPlayer`).classList.remove(`normal`);
+		document.getElementById(`videoPlayer`).classList.add(`theaterMode`);
+		// document.getElementById(`buttonLink`).classList.add(`visibility`)
+		// document.getElementById(`buttonLink`).classList.remove(`padding`)
+		// document.getElementById(`buttonLink`).innerHTML = ``;
+	}else{
+		document.getElementById(`videoPlayer`).classList.remove(`theaterMode`);
+		document.getElementById(`videoPlayer`).classList.add(`normal`);
+		// document.getElementById(`buttonLink`).classList.remove(`visibility`)
+		// document.getElementById(`buttonLink`).classList.add(`padding`)
+		// document.getElementById(`buttonLink`).innerHTML = `upload`;
+	}
+}
+
 /*----------  Utility  ----------*/
 let fixVideo = ()=>{
 	// console.log(`speed : ${speed}`);
@@ -209,11 +225,11 @@ window.addEventListener('keypress', function(keypressThing){
 	}
 
 	if(keypressThing.key == `n`){
-		ajustVolume(document.getElementById(`videoPlayer`).volume + .2);
+		ajustVolume(document.getElementById(`videoPlayer`).volume + .1);
 	}
 
 	if(keypressThing.key == `b`){
-		ajustVolume(document.getElementById(`videoPlayer`).volume - .2);
+		ajustVolume(document.getElementById(`videoPlayer`).volume - .1);
 	}
 
 	if(keypressThing.key == `p`){
@@ -224,12 +240,16 @@ window.addEventListener('keypress', function(keypressThing){
 		setSpeed(document.getElementById(`videoPlayer`).playbackRate - .25);
 	}
 
-	if(keypressThing.key == `i`){
+	if(keypressThing.key == `;`){
 		nextEpisode();
 	}
 
-	if(keypressThing.key == `u`){
+	if(keypressThing.key == `h`){
 		lastEpisode();
+	}
+
+	if(keypressThing.key == `f`){
+		theaterModeTogle();
 	}
 
 });
